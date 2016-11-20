@@ -1,4 +1,4 @@
-<!-- For more info on jQuery Mobile,  touch gestures and other useful events see : http://api.jquerymobile.com/category/events/ -->
+
 
 
 
@@ -7,8 +7,13 @@ $(document).on("pagecreate","#pageone",function(){
   	$('#taptext').on("tap",function(){
     	
           var randombutton = random();
-            alert(randombutton);
-    }}); 
+            if (randombutton = true){
+                navigator.notification.beep(1);
+            } else {
+                navigator.notification.beep(2);
+            }
+
+    } 
     
     //$('#tapholdtext').on("taphold",function(){
     	//$(this).hide();
@@ -18,7 +23,7 @@ $(document).on("pagecreate","#pageone",function(){
     	//$(this).css('color', 'green');
   	//});   
 
-});
+  )});
 
 function random() {
 	       return !Math.round(Math.random());
